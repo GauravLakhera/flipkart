@@ -16,7 +16,7 @@ function Header() {
           <input
             type="text"
             placeholder="Search for products, brands and more"
-            className="w-full p-2 rounded"
+            className="w-full p-2 rounded bg-slate-50"
           />
         </div>
 
@@ -28,7 +28,7 @@ function Header() {
                 Account
               </a>
             </div>
-            <div className="absolute z-10 left-0 hidden group-hover:block bg-white shadow-lg py-2 mt-2 rounded">
+            <div className="absolute z-10 w-32 left-0 hidden group-hover:block bg-white shadow-lg py-2 rounded">
               <a
                 href="#"
                 className="block px-6 py-2 text-black hover:bg-gray-200"
@@ -81,7 +81,7 @@ function Header() {
                 Cart
               </a>
             </div>
-            <div className="absolute left-0 hidden group-hover:block bg-white shadow-lg p-2 mt-2 rounded">
+            <div className="absolute z-10 w-32 left-0 hidden group-hover:block bg-white shadow-lg py-2 rounded">
               <a
                 href="#"
                 className="block px-6 py-2 text-black hover:bg-gray-200"
@@ -104,7 +104,7 @@ function Header() {
                 Become a Seller
               </a>
             </div>
-            <div className="absolute left-0 hidden group-hover:block bg-white shadow-lg p-2 mt-2 rounded">
+            <div className="absolute z-10 w-32 left-0 hidden group-hover:block bg-white shadow-lg py-2 rounded">
               <a
                 href="#"
                 className="block px-6 py-2 text-black hover:bg-gray-200"

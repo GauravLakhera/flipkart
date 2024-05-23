@@ -9,13 +9,14 @@ import Card from "./Card";
 
 const Body = () => {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [product2, setProduct2] = useState([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get("https://dummyjson.com/products");
+
         setProducts(response.data.products);
       } catch (err) {
         setError(err.message);
@@ -27,7 +28,7 @@ const Body = () => {
 
   return (
     <>
-      <Carousel autoPlay interval={2000} infiniteLoop>
+      <Carousel autoPlay interval={2000} infiniteLoop renderThumbs={() => []}>
         <div>
           <img src={c1}></img>
         </div>
@@ -64,7 +65,10 @@ const Body = () => {
       </div>
       <div>
         <h1 className="font-semibold text-xl">Beauty,food, toys and more </h1>
-        <div className="flex overflow-x-scroll" style={{ '-ms-overflow-style': 'none', 'scrollbar-width': 'none' }}>
+        <div
+          className="flex overflow-x-scroll"
+          style={{ "-ms-overflow-style": "none", "scrollbar-width": "none" }}
+        >
           <div className="flex">
             {products.map((product) => (
               <Card
